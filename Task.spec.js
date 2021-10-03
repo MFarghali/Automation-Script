@@ -25,10 +25,8 @@ describe('Text Suit', () => {
      //Get the Total Price
      cy.get('#total-sum').invoke('text').then((text1)=>{
         const num = text1;
-        console.log("Hello value this second time:"+ num );
-        price = new Number(text);
-        console.log("Hello value this second time:"+ price );
-        expect(text1).to.eq("75")
+        price = new Number(num);
+        expect(price).to.eq("75")
      })
 
     })
